@@ -1,0 +1,10 @@
+YAML
+Yet Anothet Markup Language -> YAML Ain't Markup Language
+Data Serialisation Language like json and xml
+Used to save data in a format
+Simple and easy to read
+Strict syntax - indentation is important
+Easily be converted to json or xml
+Most languages uses yaml
+more powerful when representing complex data
+parser etc. various tools available

@@ -1,0 +1,112 @@
+
+# YAML
+# Yet Anothet Markup Language -> YAML Ain't Markup Language
+# Data Serialisation Language like json and xml
+# Used to save data in a format
+# Simple and easy to read
+# Strict syntax - indentation is important
+# Easily be converted to json or xml
+# Most languages uses yaml
+# more powerful when representing complex data
+# parser etc. various tools available
+
+
+# < ------------------------------------------------------------------------------->
+
+
+"name": "Himanshu kabra"
+31: "roll no."
+--- # doc saperation
+# lists
+- apple
+- Apple #yaml is case sensitive
+---
+cities:
+  - jaipur
+  - surat
+  - ahmdabad
+  - fggff
+
+arrayalso: [abc, def, ghi]
+also: aaa
+
+# datatypes
+stringDataType: this is a string
+MultiLineMessage: >
+  this data
+  will be
+  treated as one line.
+# take care of indentation everytime while writing yaml.
+floatData: 44.65
+BooteanTypeFalse: No # n, false, FALSE
+BooteanTypeTrue: Yes # y, Y, yes, Yes, True
+Zero: !!float 5
+BinaryNum: !!int 0b00101110
+OctalNum: !!int 04473
+HexaDecNum: !!int 0x33ab
+CommaValue: !!int 10_000
+StringData: !!str this is a string
+NotANum: .nan
+NullData: ~
+~: keys can be null too
+education: |
+  4 GCSEs
+  3 A-Levels
+  BSc in the Internet of Things
+timeAndDate: !!timestamp 2001-12-22T05:30:02.67+05:30
+# advanced DataTypes
+# nested list
+data:
+  - arrayVal2
+  - arrayVal3
+  - -
+    - first
+    - second
+    - third
+#pair
+pair example: !!pairs # will be converted into array pairs.
+  - name: himanshu
+  - name: Raghav
+
+# sets
+setValue: !!set
+  ? himanshu
+  ? kabra
+  ? raghav
+  ? chanchlani
+
+people: !!omap
+  - Kunal:
+      name: Kunal Khushwaha
+      age: 78
+      height: 675
+  - Rahul: &nameVal
+      name: Rahul OP
+      age: 50
+      height: 563
+  - Shanu:
+      <<: *nameVal
+      height: 456 # we can also update values from copy pasted.
+# using anchors for copy pasting things
+
+school:
+  - name: "SSPS"
+    Principal: "Shivani Singh"
+    Students:
+      - name: Himanshu
+        Roll: 31
+      - name: Harshit
+        Roll: 21
+  - name: "DPS"
+    Principal: "Radhika talwar"
+# Unserstand the difference between entry and entity.
+# we put array entries using indented - dash sign.
+# we put element in same entity using indentation only.
+
+# https://bit.ly/3LxJm9t - blog
+# https://onlineyamltools.com/convert-yaml-to-json
+# https://bit.ly/3YZFUHC - datree
+# https://bit.ly/3mYxDq1 - Monokle
+# https://bit.ly/42mpMTr - Lens
+
+... #doc ending

@@ -1,0 +1,53 @@
+Get-Command
+Get-Alias
+
+Get-Content <filename>
+Set-Content <fileName.syntax> "<newContent>"
+Rename-Item <path>/<oldfileName.syntax> <newfileName.syntax>
+New-Item <address>/<itemName.syntax>
+
+C:
+D:
+E:
+
+type, cat <fileName> - show content
+ac <fileName> - add content
+sc <fileName> - set content
+clc <fileName> - clear content
+ni <fileNam.syntax> - new item
+ren <oldFileName> <newFileName> - rename file
+rd, ri, rm <fileName> - remove item
+dir, ls, gi - get item
+mv, move, mi - move item
+h - show history
+r - invoke history/repeat last task
+
+man - help
+
+cls, clear
+md, mkdir
+rmdir, rm -r
+
+
+curl -s -o /dev/null -w https://www.google.com - load time of website
+
+
+type - provides the types of different linux words (-t option gives single word)
+	types can be :
+		• Alias
+		• Function
+		• Shell built in
+		• Keyword
+		• File
+
+
+Working with text editor (cmd - vim and nano, GUI - geddit) and its settings
+https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/
+
+
+running script and reading exit code :
+$ hello1.sh
+$ echo $?
+
+
+providing parameters to script

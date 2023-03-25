@@ -1,0 +1,29 @@
+DOCKER commands :
+
+>> docker pull <base_image>
+>> docker image ls
+>> docker ps (running containers)
+>> docker run --name some-name -d <image_name or image_ID> (docker run is composed of two commands that are docker pull and docker run - if the image is not available on localhost machine then it downloads and run it)
+>> docker container ls -a
+>> docker container prune (removes all stopped container)
+>> docker volume ls (list all volumes)
+>> docker volume prune (remove all volumes - risky)
+>> docker run --name my-mongodb-second -p 5000:27017 -d mongo (port mapping using -p option) - we can map different containers using different open ports.
+>> docker logs <container-ID/name>
+>> docker network create -d bridge mongo-network
+
+>> docker run -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password -p 27017:27017 --name mongo-db --net mongo-network -d mongo (we can check environment variable option on official mongo docker image website, here we have user -net option to define network, -d to detach, --name to name container) - that's not the better wat to provide environment variable to container and hence we use yaml and docker-compose, we'll learn next in tut.
+
+>> docker run -p 8081:8081 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password -e ME_CONFIG_MONGODB_SERVER=mongo-db --net mongo-network --name mongo-express-app -d mongo-express
+
+>> docker network ispect <network-ID/name>
+
+>> docker container prune
+>> docker volume prune
+>> docker network prune
+
+>> docker compose -f <filename> up
+
+>> docker network inspect <network_ID/name>
+
+

@@ -1,0 +1,35 @@
+git config --global user.name "user_name"
+git config --global user.email "user_email"
+
+git init
+git remote add origin <repo_link>
+git remote add upstream <upstream_link>
+git remote -v (checking for origin links)
+git add <file_name.ext> (staging)
+git reset <file_name.ext> (unstaging or removing commit)
+git push -f origin frontend
+git checkout <file_name.ext> (resetting complete)
+
+git add -a (stages all)
+git add . (stages new and modified,without deleted)
+git add -u (stages modified and deleted, without new)
+
+git clone <address>
+git clone <url> --branch <branch> --single-branch <folder>
+git commit -m "message"
+git push origin master
+git pull upstream main
+git log (shows all commits)
+q (returning from log cmd)
+git status
+git pull
+git diff <file_name.ext> (checking for difference made after pulling)
+git branch
+git branch <new branch name> (creating new branch)
+git checkout <branch name> (using another branch for pushing and pulling)
+
+ls ~/.ssh (checking for hidden ssh file)
+ssh-keygen -t rsa -b 4096 -C "<Email ID>" (generating SSH key)
+eval $(ssh-agent -s)  (SSH agent ID generation)
+ssh-add ~/.ssh/id_rsa     (Adding private key (id_rsa) to own system for file transfer)
+cat ~/.ssh/id_rsa.pub     (Adding public key (id_rsa.pub) to github for file transfer)

@@ -1,0 +1,6 @@
+mongo and mongod
+database>tables>rows>columns  SQL
+database>collection>documents>fields  NoSQL
+
+MongoDB commands cheatsheet
+https://www.codewithharry.com/blogpost/mongodb-cheatsheet/

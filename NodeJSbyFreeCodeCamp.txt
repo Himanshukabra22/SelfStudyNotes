@@ -1,0 +1,12 @@
+Working with modules
+	exporting js modules and object
+json files can only be fetched using async functions
+
+let objData = await (await fetch(api)).json();
+//objData must be defined inside async function.
+//the above lines will fetch apiData and convert it into JS object for use.
+//parsing of string data or json file returns object data to be worked with.
+
+The events  module and the EventEmitter Class
+
+Promises, resolve, reject

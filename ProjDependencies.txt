@@ -1,0 +1,16 @@
+important dependancies
+
+GLOBAL
+>mongoose
+>express
+>create-react-app
+
+LOCAL
+>path
+>validator
+  https://www.npmjs.com/package/validator
+>dotenv
+>hbs
+
+dev dependancies
+>nodemon

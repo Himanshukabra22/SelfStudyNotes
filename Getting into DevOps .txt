@@ -1,0 +1,21 @@
+Getting into DevOps :
+
+>> Linux Commandline
+
+>> Bash Script
+
+>> Cloud - AWS - EC2, ECS, EKS, S3, EBS, IAM, Lambda, SNS (Simple Notification Service), AWS auto scaling, System Manager, Key Management Services, DynamoDB
+
+>> Server tools - Apache, Nginx
+
+>> Tools -
+	>> Build - Maven, Gradle, ...
+	>> SCM - Git, SVN
+	>> CI|DI - Jenkins
+	>> Container - Docker, Kubernetes
+
+>> Test - Learn how to run tests from Command (CI|CD)
+
+>> Config/Operations - Config Mng. Tools (Chef, Puppet, Ansible)
+
+>> Monitoring Tools - Nagios

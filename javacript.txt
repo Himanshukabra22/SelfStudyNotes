@@ -1,0 +1,211 @@
+String Methods :
+
+>> template literals are very useful.
+>> .length is used to print length of String.
+>> .toUppercase()
+>> .toLowercase()
+>> .slice(start,end+1)
+>> .replace(partofString,tobePlaced)
+>> .concat(String)
+>> trim() //important
+
+Array methods :
+
+>> .toString()
+>> .join(" ")
+>> .entries() //returns iterable iterator
+>> .every() //returns boolean value based on if every element passes the test
+
+<------------------------------------------------------------------------------------------>
+const ages = [32, 33, 16, 40];
+
+ages.every(checkAge)
+
+function checkAge(age) {
+  return age > 18;
+}
+<------------------------------------------------------------------------------------------>
+
+>> .fill() //this function sets a specific value for given range.
+
+<------------------------------------------------------------------------------------------>
+let arr = Array(3)
+arr.fill(0,0,arr.length)
+console.log(arr);
+<------------------------------------------------------------------------------------------>
+
+>> .pop() //removes and returns last element of array
+>> .push(element) //adds new element at the back and returns length of array
+>> .shift() //removes element from starting of array and returns the value
+>> .unshift(element) //adds element to the start of array and returns length of array
+>> delete arr[x] but do not affect the length of array
+>> arr1.concat(arr2)
+>> .sort() //changes original array //sorts alphabetically //accepts  comparator
+>> .reverse()
+>> .splice(index, no. of elements to be deleted, new elements to be placed from index saperated by comma) //returns deleted value
+>> .slice(start index, ending index) 
+>> map method for arrays (maps every value with returning value and returns array of same size)
+>> Unique values
+        > let Arr = [...new Set(anotherArray from you want unique values)];
+>> Dynamic Object values
+>> filter method //returns array of values that are filtered through given condition
+>> find method
+>> reduce method //returns a value
+>> array and object destructuring
+>> rest and spread operator (...)
+>> Optional chaining using && and ||
+
+
+Loops :
+
+>> for...in //goes indexwise
+>> for...of //goes elementwise
+>> foreach //elementwise
+>> while
+
+
+DOM, BOM and window object : (DOM element selection)
+
+>> console.dir(elem)
+
+>> GetElementById
+>> GetElementsByClassName
+>> GetElementsByTagName
+>> querySelector
+>> querySelectorAll
+
+>> .setAttribute()  //IMPORTANT
+>> .getAttribute()
+>> .removeAttribute()
+>> .hasAttribute()
+>> .createElement() //just creates element and not appends it
+>> .append() //appends the created element as children of selected element
+>> .prepend()
+>> .before()
+>> .after()
+>> .remove()
+
+>> .insertAdjacentHTML('beforebegin',"element")
+>> .insertAdjacentHTML('beforeend',"element")
+>> .insertAdjacentHTML('afterbegin',"element")
+>> .insertAdjacentHTML('afterend',"element")
+>> .insertAdjacentElement()
+>> .insertAdjacentText()
+
+>>.classList.contains(<className>)
+>> .classList.add(<className>)
+>> .classList.remove(<className>)
+>> .classList.toggle(<className>)
+
+>> innerText
+>> textContent
+>> innerHTML
+>> outerHTML
+
+>> setInterval()
+>> setTimeout()
+
+  DOM traversal
+  
+>> parentNode
+>> parentElement
+>> childNodes
+>> firstElementChild
+>> previousSibling
+>> previousElementSibling
+>> nextSibling
+>> nextElementSibling
+
+  eventListening and Event propagation (https://www.youtube.com/watch?v=5fb2aPlgoys&t=3016s)
+1. event capturing
+2. target
+3. event bubbling
+>> third parameter of addEventListener is for defining bubbling method
+>> if true, goes according queue
+>> if false, goes acccording stack
+
+
+
+
+>> Rest operator (...)
+>> Spread operator (...) //single array from array of arrays //can be used for copying values and not referencing them
+>> Array.from //important for creating pagination
+                https://www.youtube.com/watch?v=zg1Bv4xubwo&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=11
+>> optional chaining
+>> Callbacks
+>> callback hell
+
+
+
+#IMPORTANT
+>> how to get ID of clicked div
+>> e.target.id
+
+<------------------------------------------------------------------------------------------>
+const buttons = document.getElementsByTagName("button");
+
+const buttonPressed = e => {
+  console.log(e);  // Get ID of Clicked Element
+  let id = document.getElementById(e.target.id)
+  id.style.backgroundColor = "blue"
+}
+
+for (let button of buttons) {
+  button.addEventListener("click", buttonPressed);
+}
+<------------------------------------------------------------------------------------------>
+
+>> Promises
+  -> It provides the receipt to resolve or reject.
+  -> Promis always returns resolve() or reject(), and if a function is made to return promise that also means it will return resolve or reject.
+  -> .then is used if promise is resolved.
+  -> .catch is used if some error happens resolving the promise and promise is rejected.
+  -> Promise, .then and .catch, all accepts callbacks, promise callback have two parameters, that are resolve and reject.
+  -> .then accepts parameters given in resolve() and .catch accept parameters given in reject().
+
+<------------------------------------------------------------------------------------------>
+promiseFunc = (value, time, data) => {
+  return new Promise((resolve, reject) => {
+    if (value > 20) {
+      setTimeout(() => {
+        console.log(`${time}`);
+        console.log(data);
+        resolve(data);
+      }, time);
+    } else {
+        reject(`rejected with value ${value}`);
+    }
+  });
+};
+
+promiseFunc(33, 2000, 44)
+    .then((data)=>{promiseFunc(21,1000,data)
+    .then((data)=>{promiseFunc(24,2000,data)
+    .then((data)=>{promiseFunc(32,2000,data)})
+})
+})
+<------------------------------------------------------------------------------------------>
+
+>> async/await 
+  -> async/await methodology is used to make sync functions async.
+  -> async functions always returns promise.
+  -> await waits till promise is settled.
+  -> Good practice to use try and catch block to so that errors can also be read.
+
+<------------------------------------------------------------------------------------------>
+  asyncFunc = async() => {
+    try {
+        let data = await fetch(`https://24pullrequests.com/users.json?page=2`)
+        data = await data.json();
+        return data;
+    } catch (
+    err) {
+        console.log(err);
+    }
+}
+
+asyncFunc().then((data)=>{
+    console.log(data);
+})
+console.log();
+<------------------------------------------------------------------------------------------>

@@ -1,0 +1,23 @@
+Hello Docker!!
+
+Before docker problems : 
+Virtual Machine problem - Operating System required and Bootup is high
+Dependancy management
+Project Migration
+
+>> Pre-Docker, we had to install different different operating system to run multiple application
+>> We can run multiple applications on single operating system using docker containers.
+
+Docker is an application for building, running and shipping application in a consistant manner so if appication runs fine on one machine than it can work fine on other machines too.
+
+docker-compose up
+
+Isolating different applications from one another for their environment to let them work fine is another feature of docker.
+
+deleting one application with its environment is  just  one command away :
+
+docker-compose down --rmi all
+
+*virtual machines vs containers*
+
+>> Dockerfiles are used to create
