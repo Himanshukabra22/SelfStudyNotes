@@ -1,3 +1,13 @@
+These notes are written using youtube tutorial from :
+
+CodeWithHarry : https://www.youtube.com/playlist?list=PLu0W_9lII9ahR1blWXxgSlL4y9iQBnLpR
+
+FreeCodeCamp/Coding Adict : https://www.youtube.com/playlist?list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ
+
+FreeCodeCamp/DOM manipulation : https://www.youtube.com/watch?v=5fb2aPlgoys
+
+
+ 
 String Methods :
 
 >> template literals are very useful.
@@ -209,3 +219,77 @@ asyncFunc().then((data)=>{
 })
 console.log();
 <------------------------------------------------------------------------------------------>
+
+>> Width/Height
+  -> console.log('width',window.innerWidth)
+  -> console.log('Height',window.innerHeight)
+  -> We can use it to make website responsive.
+  -> selector.getBoundingClientRect()
+
+
+>> Timestamps 
+  -> console.log(new Data())
+  -> console.log(Date.now())
+  -> console.log(new Date().getTime())
+  -> console.log(new Date().valueof())
+  -> If you want to use date methods, below link can help you out -
+  -> https://www.youtube.com/watch?v=-Sbd08tTbAA&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=21
+
+
+>> ECMAScript 2022
+  -> Before : last element is array was accessed as arr[arr.length-1]
+  -> After : arr.at(-1) i.e. we can use whole range of integers (negative and positive) for indexing through at() method.
+
+  -> Before : we had to wrap await inside async function oly.
+  -> After : TOP LEVEL AWAIT - we don't need to use async function wraping for using await (now promises can be settled without async wraping)
+
+>> Element Helper for projects
+
+<------------------------------------------------------------------------------------------>
+const getElement = (selector,isList) => {
+
+  const el = isList ? [...document.querySelector(selector)] : document.querySelector(selector);
+
+  if((!isList && el) || (isList && !el.length < 1)) return el;
+  throw new Error(`Please double check  selector : ${selector}`);
+
+}
+
+//we can pass single parameter to this function which is element selector if we only want DOM of that element.
+//we can pass second parameter as 'true' if we want array of given selector DOM.
+<------------------------------------------------------------------------------------------>
+
+>> Sending post request using fetch api
+
+<------------------------------------------------------------------------------------------>
+async function postData(url = "", data = {}) {
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data), // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
+
+postData("https://jsonplaceholder.typicode.com/posts", 
+{ 
+    title : 'JSK
+    body : 'Jai Shree Krishna',
+    userId : 1100
+}).then((data) => {
+  console.log(data); // JSON data parsed by `data.json()` call
+});
+<------------------------------------------------------------------------------------------>
+
+>> Cookies
+ -> console.log(document.cookie)
+ -> 
