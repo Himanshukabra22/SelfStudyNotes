@@ -33,3 +33,112 @@ ssh-keygen -t rsa -b 4096 -C "<Email ID>" (generating SSH key)
 eval $(ssh-agent -s)  (SSH agent ID generation)
 ssh-add ~/.ssh/id_rsa     (Adding private key (id_rsa) to own system for file transfer)
 cat ~/.ssh/id_rsa.pub     (Adding public key (id_rsa.pub) to github for file transfer)
+
+
+<<< ----------------------------------------------------------------------------------------------- >>>
+
+Here are some of the commonly used Git commands:
+
+1. `git init`: Initializes a new Git repository in your current directory.
+
+2. `git clone`: Clones (downloads) a repository from a remote server to your local machine.
+
+3. `git add`: Adds changes made in the working directory to the staging area.
+
+4. `git status`: Shows the status of the working directory and staging area.
+
+5. `git commit`: Records changes added to the staging area into the repository history.
+
+6. `git push`: Pushes changes from your local branch to a remote repository.
+
+7. `git pull`: Fetches changes from a remote repository and applies them to your local branch.
+
+8. `git log`: Shows a list of commit logs in reverse chronological order.
+
+9. `git branch`: Shows a list of all branches in the repository.
+
+10. `git checkout`: Switches between different branches or commits.
+
+11. `git merge`: Merges one or more branches together.
+
+12. `git remote`: Shows a list of all remote repositories associated with the current repository.
+
+13. `git fetch`: Downloads changes from a remote repository for merging but does not apply them locally.
+
+14. `git diff`: Shows differences between different files, commits, or branches.
+
+15. `git stash`: Temporarily saves changes that are not yet ready to be committed and removes them from the working directory.
+
+16. `git reset`: Resets your repository to a previous commit by discarding any commits made after that point.
+
+17. `git rebase`: Reorganizes commits in a branch to appear as if they were made sequentially, making the commit history easier to follow.
+
+18. `git tag`: Assigns a specific version number to a commit for easier reference later on.
+
+19. `git blame`: Shows who made changes to each line of a file and when those changes were made.
+
+20. `git cherry-pick`: Applies the changes made in one or more commits to a different branch
+
+21. `git rm`: Removes a file from the working directory and stages the deletion so that it will be removed from the repository at the next commit.
+
+22. `git config`: Sets configuration options for Git, such as your name and email address.
+
+23. `git remote add`: Adds a new remote repository to your local Git repository.
+
+24. `git remote remove`: Removes an existing remote repository from your local Git repository.
+
+25. `git push --force`: Forces the push of your changes to a remote branch, even if there are conflicts with the changes already present in that branch.
+
+26. `git bisect`: Helps you find the commit that introduced a bug by performing a binary search on the commit history.
+
+27. `git grep`: Searches for a specific string or pattern in your repository's files.
+
+28. `git submodule`: Allows you to include another Git repository as a subdirectory within your own repository.
+
+29. `git log --graph`: Shows a visual representation of the commit history, with branches and merges clearly visible.
+
+30. `git reflog`: Shows a detailed log of all recent operations performed in your Git repository, including changes made to the commit history and branches.
+
+31. `git stash apply`: Applies the changes that were temporarily saved by using `git stash`.
+
+32. `git cherry`: Shows a list of commits that haven't yet been applied to the current branch.
+
+33. `git show`: Displays information about a commit or object.
+
+34. `git revert`: Reverts one or more existing commits by creating new commits that undo the changes made in the original commits.
+
+35. `git tag -a`: Creates an annotated tag that includes additional information such as author name and email, date and time, and a message.
+
+36. `git submodule update`: Updates the submodules within your Git repository to the latest versions.
+
+37. `git clean`: Removes untracked files from the working directory.
+
+38. `git shortlog`: Generates a summary of the commit history grouped by author.
+
+39. `git describe`: Provides a human-readable name for a specific commit based on its location in the commit history.
+
+40. `git log --oneline`: Shows a summary of the commit history with abbreviated commit IDs and commit messages.
+
+41. `git remote -v`: Shows a list of all remote repositories associated with the current repository along with their URLs.
+
+42. `git push origin :<branch_name>`: Deletes a remote branch where `origin` is the name of the remote repository and `<branch_name>` is the name of the branch you want to delete.
+
+43. `git rebase -i`: Enables interactive rebasing, allowing you to edit or remove individual commits from your repository history.
+
+44. `git revert -n`: Performs a revert without creating a new commit, allowing you to further modify the changes before committing them.
+
+45. `git log --pretty=format:"%h - %an, %ar : %s"`: Shows a formatted version of the commit history with abbreviated commit IDs, author names, relative timestamps, and commit messages.
+
+46. `git bisect start`: Starts a binary search for a specific commit by dividing the commit history in half and testing each half until the faulty commit is found.
+
+47. `git blame -L <start>,<end> <file>`: Shows who made changes to a specific range of lines within a file and when those changes were made.
+
+Sure, here are three more Git commands:
+
+48. `git revert --no-commit`: Performs a revert but doesn't create a new commit, allowing you to modify the changes before committing them.
+
+49. `git checkout -- <file>`: Discards all changes made to a specific file and restores it to the last committed state.
+
+50. `git diff --staged`: Shows the differences between the files in the staging area and the last committed version.
+
+<<< ----------------------------------------------------------------------------------------------- >>>

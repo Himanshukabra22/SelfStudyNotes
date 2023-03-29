@@ -292,4 +292,30 @@ postData("https://jsonplaceholder.typicode.com/posts",
 
 >> Cookies
  -> console.log(document.cookie)
- -> 
+ -> document.cookie = "name=himanshu; path=/a; expires=Tue, 29 Mar 2041 02:18:22 GMT"
+ -> We can only set single cookie at aa time by above method.
+ -> document.cookie = `${encodeURIcomponent(key)}=${encodeURIcomponent(value)}`
+ -> name=pair should only be under or 4KB and not exceed 20 pairs.
+
+
+>> Local Storage
+ -> key value pairs that can survive page refresh
+ -> developer options > Application > Local Storage
+ -> localStorage.setItem("name","himanshu");
+ -> localStorage.getItem(key)
+ -> localStorage.removeItem(key)
+ -> localStorage.clear()
+ -> localStorage.length
+ -> localStorage.key(index)
+ -> keys and values are string
+ -> JSON.stringify(object)
+ -> JSON.parse(string)
+
+
+>> Session Storage
+ -> key value pairs that can't survive page refresh
+ -> developer options > Application > Session Storage
+ -> sessionStorage.setItem("name","himanshu");
+ -> sessionStorage.getItem(key)
+ -> sessionStorage.removeItem(key)
+ -> sessionStorage.clear()
